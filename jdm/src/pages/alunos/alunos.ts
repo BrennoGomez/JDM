@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Aluno } from './../../models/aluno.models';
 import { AlunosEditarPage } from "../alunos-editar/alunos-editar";
+import { AlunosListaPage } from "../alunos-lista/alunos-lista";
 
 @IonicPage()
 @Component({
@@ -16,10 +17,10 @@ export class AlunosPage {
 
     Aluno$: FirebaseListObservable<Aluno[]>
 
-    constructor(public af: AngularFireDatabase, public navCtrl: NavController,) {
+    constructor(public af: AngularFireDatabase, public navCtrl: NavController) {
       this.Aluno$ = this.af.list('Alunos');
     }
-  
+    
     addAluno(novoAluno: Aluno) {
       this.Aluno$.push({
         nome: this.novoAluno.nome,
@@ -29,6 +30,8 @@ export class AlunosPage {
 
       this.novoAluno = {} as Aluno;
       this.navCtrl.pop();
+      this.navCtrl.push(AlunosListaPage);
+    
     }
 
     editar(){

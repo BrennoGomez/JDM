@@ -16,7 +16,7 @@ export class ProfessoresListaPage {
   Professor$: FirebaseListObservable<Professor[]>
   
     constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase, private actionSheetCtrl: ActionSheetController) {
-      this.Professor$ = this.database.list('Lista de Professores');
+      this.Professor$ = this.database.list('/Professores');
     }
   
     selecionarNovoProfessor(novoProfessor: Professor) {

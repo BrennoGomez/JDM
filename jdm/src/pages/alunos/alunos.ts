@@ -30,7 +30,6 @@ export class AlunosPage {
 
       this.novoAluno = {} as Aluno;
       this.navCtrl.pop();
-      this.navCtrl.push(AlunosListaPage);
     
     }
 

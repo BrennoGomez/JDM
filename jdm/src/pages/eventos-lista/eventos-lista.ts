@@ -15,7 +15,7 @@ export class EventosListaPage {
   Evento$: FirebaseListObservable<Evento[]>
   
     constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase, private actionSheetCtrl: ActionSheetController) {
-      this.Evento$ = this.database.list('Lista de Eventos');
+      this.Evento$ = this.database.list('/Eventos');
     }
   
     selecionarNovoEvento(novoEvento: Evento) {

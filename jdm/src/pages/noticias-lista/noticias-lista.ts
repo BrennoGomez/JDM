@@ -15,7 +15,7 @@ export class NoticiasListaPage {
   Noticia$: FirebaseListObservable<Noticia[]>
   
     constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase, private actionSheetCtrl: ActionSheetController) {
-      this.Noticia$ = this.database.list('Lista de Noticias');
+      this.Noticia$ = this.database.list('/Noticias');
     }
   
     selecionarNovaNoticia(novaNoticia: Noticia) {

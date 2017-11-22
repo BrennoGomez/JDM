@@ -15,7 +15,7 @@ export class ImagensListaPage {
   Imagem$: FirebaseListObservable<Imagem[]>
   
     constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase, private actionSheetCtrl: ActionSheetController) {
-      this.Imagem$ = this.database.list('Lista de Imagens');
+      this.Imagem$ = this.database.list('/Imagens');
     }
   
     selecionarNovaImagem(novaImagem: Imagem) {

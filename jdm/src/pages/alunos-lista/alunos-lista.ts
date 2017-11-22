@@ -11,11 +11,10 @@ import { FirebaseListObservable, AngularFireDatabase } from "angularfire2/databa
   templateUrl: 'alunos-lista.html',
 })
 export class AlunosListaPage {
-
   Aluno$: FirebaseListObservable<Aluno[]>
-  
+
     constructor(public navCtrl: NavController, public navParams: NavParams, private database: AngularFireDatabase, private actionSheetCtrl: ActionSheetController) {
-      this.Aluno$ = this.database.list('Lista de Alunos');
+      this.Aluno$ = this.database.list('/Alunos');
     }
   
     selecionarNovoAluno(novoAluno: Aluno) {

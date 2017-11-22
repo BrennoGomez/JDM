@@ -7,6 +7,11 @@ import { ProfessoresPage } from "../professores/professores";
 import { ImagensPage } from "../imagens/imagens";
 import { SobrePage } from "../sobre/sobre";
 import { LocalizacaoPage } from "../localizacao/localizacao";
+import { AlunosListaPage } from "../alunos-lista/alunos-lista";
+import { ImagensListaPage } from "../imagens-lista/imagens-lista";
+import { ProfessoresListaPage } from "../professores-lista/professores-lista";
+import { NoticiasListaPage } from "../noticias-lista/noticias-lista";
+import { EventosListaPage } from "../eventos-lista/eventos-lista";
 
 @Component({
   selector: 'page-home',
@@ -19,23 +24,23 @@ export class HomePage {
   }
   
   public alunos() {
-    this.navCtrl.push(AlunosPage);
+    this.navCtrl.push(AlunosListaPage);
   }
     
   public eventos() {
-    this.navCtrl.push(EventosPage);
+    this.navCtrl.push(EventosListaPage);
   }
   
   public noticias(){
-    this.navCtrl.push(NoticiasPage)
+    this.navCtrl.push(NoticiasListaPage)
   }
 
   public professores(){
-    this.navCtrl.push(ProfessoresPage)
+    this.navCtrl.push(ProfessoresListaPage)
   }
 
   public imagens(){
-    this.navCtrl.push(ImagensPage)
+    this.navCtrl.push(ImagensListaPage)
   }
 
   public sobre(){

@@ -4,6 +4,9 @@ import { AlunosPage } from "../alunos/alunos";
 import { EventosPage } from "../eventos/eventos";
 import { NoticiasPage } from "../noticias/noticias";
 import { ProfessoresPage } from "../professores/professores";
+import { ImagensPage } from "../imagens/imagens";
+import { SobrePage } from "../sobre/sobre";
+import { LocalizacaoPage } from "../localizacao/localizacao";
 
 @Component({
   selector: 'page-home',
@@ -31,4 +34,15 @@ export class HomePage {
     this.navCtrl.push(ProfessoresPage)
   }
 
+  public imagens(){
+    this.navCtrl.push(ImagensPage)
+  }
+
+  public sobre(){
+    this.navCtrl.push(SobrePage)
+  }
+
+  public localizacao(){
+    this.navCtrl.push(LocalizacaoPage)
+  }
 }

@@ -26,6 +26,7 @@ export class NoticiasPage {
         });
   
         this.novaNoticia = {} as Noticia;
+        this.navCtrl.pop();
       }
   
       editar(){

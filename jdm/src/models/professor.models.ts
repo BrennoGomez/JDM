@@ -2,7 +2,7 @@ export interface Professor {
     
         $key?: string,
         nome: string;
-        disclipina: string;
+        disciplina: string;
         formacao: string;
         idade: string;
     }

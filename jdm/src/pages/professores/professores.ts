@@ -22,12 +22,13 @@ export class ProfessoresPage {
       addProfessor(novoProfessor: Professor) {
         this.Professor$.push({
           nome: this.novoProfessor.nome,
-          disciplina: this.novoProfessor.disclipina,
+          disciplina: this.novoProfessor.disciplina,
           formacao: this.novoProfessor.formacao,
           idade: this.novoProfessor.idade
         });
   
         this.novoProfessor = {} as Professor;
+        this.navCtrl.pop();
       }
   
       editar(){

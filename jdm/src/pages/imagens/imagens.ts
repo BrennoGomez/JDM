@@ -20,11 +20,13 @@ export class ImagensPage {
       }
     
       addImagem(novaImagem: Imagem) {
+        
         this.Imagem$.push({
           legenda: this.novaImagem.legenda
         });
   
         this.novaImagem = {} as Imagem;
+        this.navCtrl.pop();
       }
   
       editar(){

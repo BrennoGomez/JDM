@@ -4,5 +4,4 @@ export interface Aluno {
     nome: string;
     matricula: string;
     serie: string;
-    senha: string;
 }

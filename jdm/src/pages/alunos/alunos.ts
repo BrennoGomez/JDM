@@ -28,6 +28,7 @@ export class AlunosPage {
       });
 
       this.novoAluno = {} as Aluno;
+      this.navCtrl.pop();
     }
 
     editar(){

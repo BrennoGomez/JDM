@@ -29,6 +29,7 @@ export class EventosPage {
       });
 
       this.novoEvento = {} as Evento;
+      this.navCtrl.pop();
     }
 
     editar(){

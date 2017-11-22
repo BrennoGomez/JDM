@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Professor } from "../../models/professor.models";
 import { FirebaseListObservable, AngularFireDatabase } from "angularfire2/database";
-import { Http } from "@angular/http/http";
 import { ProfessoresEditarPage } from "../professores-editar/professores-editar";
 
 @IonicPage()
@@ -16,7 +15,7 @@ export class ProfessoresPage {
   
   Professor$: FirebaseListObservable<Professor[]>
   
-      constructor(public http: Http, public af: AngularFireDatabase, public navCtrl: NavController,) {
+      constructor(public af: AngularFireDatabase, public navCtrl: NavController,) {
         this.Professor$ = this.af.list('Professores');
       }
     

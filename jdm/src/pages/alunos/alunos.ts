@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Aluno } from './../../models/aluno.models';
 import { AlunosEditarPage } from "../alunos-editar/alunos-editar";
@@ -20,7 +16,7 @@ export class AlunosPage {
 
     Aluno$: FirebaseListObservable<Aluno[]>
 
-    constructor(public http: Http, public af: AngularFireDatabase, public navCtrl: NavController,) {
+    constructor(public af: AngularFireDatabase, public navCtrl: NavController,) {
       this.Aluno$ = this.af.list('Alunos');
     }
   

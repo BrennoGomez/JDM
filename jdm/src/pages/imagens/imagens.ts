@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Imagem } from "../../models/imagem.models";
 import { FirebaseListObservable, AngularFireDatabase } from "angularfire2/database";
-import { Http } from "@angular/http/http";
 import { ImagensEditarPage } from "../imagens-editar/imagens-editar";
 
 @IonicPage()
@@ -16,7 +15,7 @@ export class ImagensPage {
   
     Imagem$: FirebaseListObservable<Imagem[]>
   
-      constructor(public http: Http, public af: AngularFireDatabase, public navCtrl: NavController,) {
+      constructor(public af: AngularFireDatabase, public navCtrl: NavController,) {
         this.Imagem$ = this.af.list('Imagens');
       }
     

@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Evento } from "../../models/evento.models";
 import { EventosEditarPage } from "../eventos-editar/eventos-editar";
@@ -21,7 +17,7 @@ export class EventosPage {
 
   Evento$: FirebaseListObservable<Evento[]>
 
-    constructor(public http: Http, public af: AngularFireDatabase, public navCtrl: NavController,) {
+    constructor(public af: AngularFireDatabase, public navCtrl: NavController,) {
       this.Evento$ = this.af.list('Eventos');
     }
   

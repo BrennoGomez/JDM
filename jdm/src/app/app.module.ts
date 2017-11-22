@@ -24,6 +24,8 @@ import { NoticiasEditarPage } from "../pages/noticias-editar/noticias-editar";
 import { NoticiasListaPage } from "../pages/noticias-lista/noticias-lista";
 import { ProfessoresEditarPage } from "../pages/professores-editar/professores-editar";
 import { ProfessoresListaPage } from "../pages/professores-lista/professores-lista";
+import { SobrePage } from "../pages/sobre/sobre";
+import { LocalizacaoPage } from "../pages/localizacao/localizacao";
 
 export const firebaseConfig =
   {
@@ -54,6 +56,8 @@ export const firebaseConfig =
     NoticiasListaPage,
     ProfessoresEditarPage,
     ProfessoresListaPage,
+    SobrePage,
+    LocalizacaoPage,
 
   ],
   imports: [
@@ -82,6 +86,9 @@ export const firebaseConfig =
     NoticiasListaPage,
     ProfessoresEditarPage,
     ProfessoresListaPage,
+    SobrePage,
+    LocalizacaoPage,
+    
   ],
   providers: [
     StatusBar,

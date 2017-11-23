@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item-divider class="lista1" align="center"></ion-item-divider>
+    <img class="logoApp" src="assets/img/JDM.png">
+    <ion-item-divider class="lista2" align="center"></ion-item-divider>
+
+
+    <ion-list>
+        
+          <ion-item>
+            <ion-label floating>Usuário</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label floating>Senha</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        
+          <button ion-button block (click)="fazerLogin(login)">Entrar</button>
+        </ion-list>
+
+</ion-content>

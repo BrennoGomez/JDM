@@ -26,6 +26,7 @@ import { ProfessoresEditarPage } from "../pages/professores-editar/professores-e
 import { ProfessoresListaPage } from "../pages/professores-lista/professores-lista";
 import { SobrePage } from "../pages/sobre/sobre";
 import { LocalizacaoPage } from "../pages/localizacao/localizacao";
+import { LoginPage } from "../pages/login/login";
 
 export const firebaseConfig =
   {
@@ -58,6 +59,7 @@ export const firebaseConfig =
     ProfessoresListaPage,
     SobrePage,
     LocalizacaoPage,
+    LoginPage,
 
   ],
   imports: [
@@ -88,6 +90,7 @@ export const firebaseConfig =
     ProfessoresListaPage,
     SobrePage,
     LocalizacaoPage,
+    LoginPage,
     
   ],
   providers: [
